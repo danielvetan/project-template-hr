@@ -1,0 +1,60 @@
+<!-- Page Header -->
+<div class="page-header">
+  <div class="content-page-header">
+    <h5>Lightbox</h5>
+  </div>	
+</div>	
+<!-- /Page Header -->	
+<div class="row">
+  <!-- Lightbox -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Single Image Lightbox</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <ng-container *ngFor="let image of albumsOne; let i = index">
+            <div class="col-md-4 mb-2 mb-md-0" *ngIf="i < 2">
+              <a (click)="open(i, albumsOne)"href="javascript:void(0);">
+                <img
+                class="img-fluid"
+                [src]="image.src"
+                alt="image"
+              />
+              </a>
+             
+              
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Lightbox -->
+
+  <!-- Lightbox -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Image with Description</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <ng-container *ngFor="let image of albumsTwo; let i = index">
+            <div class="col-md-4 mb-2 mb-md-0" *ngIf="i > 2">
+              <a (click)="open(i, albumsTwo)" href="javascript:void(0);">
+              <img
+                class="img-fluid"
+                [src]="image.src"
+                 alt="image"
+              />
+              </a>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Lightbox -->
+</div>
